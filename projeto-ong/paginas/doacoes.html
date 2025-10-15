@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faça uma doação para a ONG Vida Nova e ajude a manter nossos projetos. Sua contribuição faz a diferença.">
+    
+    <title>Doações | ONG Vida Nova</title>
+</head>
+<body>
+
+    <header>
+        <h1><a href="../index.html">ONG Vida Nova</a></h1>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                <li><a href="doacoes.html">Doações</a></li>
+                <li><a href="transparencia.html">Transparência</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <h1>Faça uma Doação</h1>
+
+        <section>
+            <h2>Sua Contribuição Transforma Vidas</h2>
+            <p>Cada doação, não importa o valor, é um tijolo na construção de um futuro mais justo para dezenas de crianças, jovens e adultos. Com sua ajuda, garantimos a continuidade de nossos projetos e ampliamos nosso impacto na comunidade.</p>
+            <ul>
+                <li>Com <strong>R$ 30,00</strong> você garante o material escolar de uma criança por um semestre.</li>
+                <li>Com <strong>R$ 60,00</strong> você financia uma oficina de capacitação profissional para um jovem.</li>
+                <li>Com <strong>R$ 100,00</strong> você ajuda a custear uma cesta básica para uma família assistida.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Doe Agora e Faça Parte Dessa História</h2>
+            
+            <form action="#" method="post">
+                
+                <fieldset>
+                    <legend>Escolha o Valor da Doação (R$)</legend>
+                    
+                    <input type="radio" id="valor_30" name="valor_doacao" value="30" required>
+                    <label for="valor_30">R$ 30</label><br>
+
+                    <input type="radio" id="valor_60" name="valor_doacao" value="60">
+                    <label for="valor_60">R$ 60</label><br>
+                    
+                    <input type="radio" id="valor_100" name="valor_doacao" value="100">
+                    <label for="valor_100">R$ 100</label><br><br>
+
+                    <label for="outro_valor">Outro Valor (R$):</label><br>
+                    <input type="number" id="outro_valor" name="outro_valor" min="5" step="1" placeholder="Ex: 75"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Seus Dados</legend>
+                    
+                    <label for="nome_doador">Nome Completo:</label><br>
+                    <input type="text" id="nome_doador" name="nome_doador" required placeholder="Seu nome como no documento"><br><br>
+
+                    <label for="email_doador">E-mail:</label><br>
+                    <input type="email" id="email_doador" name="email_doador" required placeholder="Para enviarmos o recibo"><br><br>
+
+                    <label for="cpf_doador">CPF:</label><br>
+                    <input type="text" id="cpf_doador" name="cpf_doador" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-00"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Frequência</legend>
+                    <input type="radio" id="freq_unica" name="frequencia" value="unica" checked required>
+                    <label for="freq_unica">Doação Única</label><br>
+
+                    <input type="radio" id="freq_mensal" name="frequencia" value="mensal">
+                    <label for="freq_mensal">Doação Mensal</label><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Forma de Pagamento</legend>
+                    <p>Ao confirmar, você será redirecionado para um ambiente seguro.</p>
+                    <select id="pagamento" name="pagamento" required>
+                        <option value="">--Selecione--</option>
+                        <option value="pix">PIX</option>
+                        <option value="cartao_credito">Cartão de Crédito</option>
+                        <option value="boleto">Boleto Bancário</option>
+                    </select>
+                </fieldset>
+                <br>
+                <input type="checkbox" id="termos" name="termos" required>
+                <label for="termos">Li e aceito os termos e condições de doação.</label><br><br>
+
+                <input type="submit" value="Confirmar Doação">
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>ONG Vida Nova</strong></p>
+        <p>Endereço: Rua da Esperança, 123 - Centro, Diadema/SP</p>
+        <p>Telefone: (11) 5555-1234 | E-mail: contato@ongvidanova.org.br</p>
+        <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

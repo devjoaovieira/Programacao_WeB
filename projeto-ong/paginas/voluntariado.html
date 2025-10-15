@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seja um voluntário na ONG Vida Nova e ajude a transformar vidas. Conheça as áreas de atuação e preencha nosso formulário de cadastro.">
+    
+    <title>Seja Voluntário | ONG Vida Nova</title>
+</head>
+<body>
+
+    <header>
+        <h1><a href="../index.html">ONG Vida Nova</a></h1>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                <li><a href="doacoes.html">Doações</a></li>
+                <li><a href="transparencia.html">Transparência</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <h1>Seja um Voluntário</h1>
+
+        <section>
+            <h2>Sua Ajuda Constrói o Futuro</h2>
+            <p>O tempo é um dos bens mais preciosos que podemos doar. Ao se tornar um voluntário da ONG Vida Nova, você se junta a uma rede de pessoas engajadas que dedicam seu talento e energia para criar um impacto real e duradouro na vida de centenas de pessoas.</p>
+            <p>Não importa qual seja sua habilidade, ela é bem-vinda e necessária. Junte-se a nós!</p>
+        </section>
+
+        <section>
+            <h2>Onde Você Pode Atuar</h2>
+            <ul>
+                <li><strong>Educação:</strong> Dando aulas de reforço, ajudando em oficinas de leitura e artes.</li>
+                <li><strong>Mentoria Profissional:</strong> Orientando jovens e adultos em suas carreiras.</li>
+                <li><strong>Eventos:</strong> Ajudando na organização e execução de nossas campanhas e eventos de arrecadação.</li>
+                <li><strong>Comunicação:</strong> Criando conteúdo para nossas redes sociais e site.</li>
+                <li><strong>Administrativo:</strong> Apoiando nas tarefas de organização interna da ONG.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Nossa Comunidade em Crescimento</h2>
+            <p>Ano após ano, mais pessoas se juntam à nossa causa. Veja a evolução do nosso número de voluntários ativos.</p>
+
+            <canvas id="graficoVoluntarios" width="400" height="250"></canvas>
+
+            <script>
+                // Encontra o elemento <canvas> na página
+                const canvasLinha = document.getElementById('graficoVoluntarios');
+                
+                // Pega o "contexto" de desenho 2D
+                const ctxLinha = canvasLinha.getContext('2d');
+                
+                // Desenha uma linha simples como placeholder
+                // Define a cor e a espessura da linha
+                ctxLinha.strokeStyle = '#2E8B57'; // Um tom de verde
+                ctxLinha.lineWidth = 3;
+
+                // Inicia o desenho
+                ctxLinha.beginPath();
+                
+                // Move o "pincel" para a posição inicial (canto inferior esquerdo)
+                ctxLinha.moveTo(50, 200);
+                
+                // Cria os pontos da linha para simular crescimento
+                ctxLinha.lineTo(150, 150);
+                ctxLinha.lineTo(250, 100);
+                ctxLinha.lineTo(350, 50);
+
+                // Desenha a linha na tela
+                ctxLinha.stroke();
+            </script>
+            <p><em>Gráfico ilustrativo. A implementação completa dos dados será feita com JavaScript.</em></p>
+        </section>
+
+        <section>
+            <h2>Formulário de Cadastro</h2>
+            <p>Preencha o formulário abaixo e nossa equipe entrará em contato em breve. Obrigado pelo seu interesse!</p>
+            
+            <form action="#" method="post"> <fieldset>
+                    <legend>Seus Dados Pessoais</legend>
+
+                    <label for="nome">Nome Completo:</label><br>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo"><br><br>
+
+                    <label for="email">Melhor E-mail:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@email.com"><br><br>
+
+                    <label for="telefone">Telefone (com DDD):</label><br>
+                    <input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required placeholder="(11) 99999-9999"><br><br>
+
+                    <label for="nascimento">Data de Nascimento:</label><br>
+                    <input type="date" id="nascimento" name="nascimento" required><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesses e Disponibilidade</legend>
+
+                    <p>Quais são suas áreas de interesse para voluntariado? (Marque quantas quiser)</p>
+                    <input type="checkbox" id="interesse_educacao" name="interesse" value="educacao">
+                    <label for="interesse_educacao">Educação e Aulas</label><br>
+                    <input type="checkbox" id="interesse_eventos" name="interesse" value="eventos">
+                    <label for="interesse_eventos">Organização de Eventos</label><br>
+                    <input type="checkbox" id="interesse_comunicacao" name="interesse" value="comunicacao">
+                    <label for="interesse_comunicacao">Comunicação e Mídias Sociais</label><br>
+                    <input type="checkbox" id="interesse_admin" name="interesse" value="admin">
+                    <label for="interesse_admin">Tarefas Administrativas</label><br><br>
+
+                    <label for="disponibilidade">Qual sua disponibilidade semanal?</label><br>
+                    <select id="disponibilidade" name="disponibilidade" required>
+                        <option value="">--Selecione uma opção--</option>
+                        <option value="ate_4h">Até 4 horas por semana</option>
+                        <option value="4_a_8h">De 4 a 8 horas por semana</option>
+                        <option value="mais_de_8h">Mais de 8 horas por semana</option>
+                        <option value="eventual">Apenas em eventos específicos</option>
+                    </select><br><br>
+
+                    <label for="motivacao">Por que você gostaria de ser voluntário na ONG Vida Nova?</label><br>
+                    <textarea id="motivacao" name="motivacao" rows="6" cols="50" required placeholder="Conte-nos um pouco sobre sua motivação..."></textarea><br><br>
+                </fieldset>
+                
+                <input type="submit" value="Enviar Cadastro">
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>ONG Vida Nova</strong></p>
+        <p>Endereço: Rua da Esperança, 123 - Centro, Diadema/SP</p>
+        <p>Telefone: (11) 5555-1234 | E-mail: contato@ongvidanova.org.br</p>
+        <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
