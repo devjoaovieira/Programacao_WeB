@@ -33,7 +33,7 @@
 
         <article>
             <h2 id="educacao">Educação para Crianças e Jovens</h2>
-            <img src="" alt="Crianças sorrindo em uma sala de aula.">
+            <img src="https://picsum.photos/600/300?random=21" alt="Crianças sorrindo em uma sala de aula.">
             <p>Este é nosso projeto pioneiro. O objetivo é oferecer suporte educacional e cultural para crianças e jovens de 6 a 14 anos, matriculados na rede pública de ensino. Através de um ambiente seguro e estimulante, buscamos fortalecer o aprendizado e despertar o potencial de cada um.</p>
             
             <h3>Principais Atividades:</h3>
@@ -48,7 +48,7 @@
 
         <article>
             <h2 id="capacitacao">Capacitação Profissional para Adultos</h2>
-            <img src="" alt="Adultos em um curso de informática.">
+            <img src="https://picsum.photos/600/300?random=22" alt="Adultos em um curso de informática.">
             <p>Focado em jovens e adultos a partir de 18 anos, este projeto visa ampliar as oportunidades de inserção no mercado de trabalho. Oferecemos cursos, workshops e mentorias para desenvolver habilidades técnicas e socioemocionais valorizadas profissionalmente.</p>
             
             <h3>Cursos Oferecidos:</h3>
@@ -63,7 +63,7 @@
 
         <article>
             <h2 id="apoio-familias">Apoio a Famílias em Vulnerabilidade</h2>
-            <img src="" alt="Voluntário entregando uma cesta básica para uma família.">
+            <img src="https://picsum.photos/id/76/600/300" alt="Voluntário entregando uma cesta básica para uma família.">
             <p>Além da educação, entendemos a importância de garantir a segurança e o bem-estar das famílias de nossos atendidos. Este projeto oferece suporte material e emocional para núcleos familiares em situação de vulnerabilidade social.</p>
             
             <h3>Ações do Projeto:</h3>
@@ -82,24 +82,11 @@
             <canvas id="graficoImpacto" width="400" height="250"></canvas>
             
             <script>
-                // Encontra o elemento <canvas> na página
                 const canvasBarras = document.getElementById('graficoImpacto');
-
-                // Pega o "contexto" de desenho 2D
                 const ctxBarras = canvasBarras.getContext('2d');
-                
-                // Desenha algumas barras como placeholder
-                // Define a cor de preenchimento
-                ctxBarras.fillStyle = '#D2691E'; // Um tom de marrom/laranja
-
-                // Barra 1 (Região A)
-                // Parâmetros: x_inicial, y_inicial, largura, altura
+                ctxBarras.fillStyle = '#D2691E';
                 ctxBarras.fillRect(70, 100, 50, 130); 
-
-                // Barra 2 (Região B)
                 ctxBarras.fillRect(170, 50, 50, 180);
-
-                // Barra 3 (Região C)
                 ctxBarras.fillRect(270, 150, 50, 80);
             </script>
             <p><em>Gráfico ilustrativo. A implementação completa dos dados será feita com JavaScript.</em></p>
@@ -110,112 +97,7 @@
             <p>Ouça as histórias de pessoas que tiveram suas vidas transformadas por nossos projetos.</p>
 
             <figure>
-                <figcaption><strong>Depoimento de Carlos Andrade</strong> - Aluno do curso de Capacitação Profissional.</figcaption>
-                <audio controls>
-                    <source src="../assets/audios/depoimento-carlos.mp3" type="audio/mpeg">
-                    Seu navegador não suporta o elemento de áudio.
-                </audio>
-            </figure>
-
-            <figure>
-                <figcaption><strong>Depoimento de Sofia Lima</strong> - Mãe de aluna do projeto de Educação.</figcaption>
-                <audio controls>
-                    <source src="../assets/audios/depoimento-sofia.ogg" type="audio/ogg">
-                    <source src="../assets/audios/depoimento-sofia.mp3" type="audio/mpeg">
-                    Seu navegador não suporta o elemento de áudio.
-                </audio>
-            </figure>
-            
-        </section>
-
-        <section>
-            <h2>Galeria de Atividades</h2>
-            <p>Veja alguns momentos de nossos projetos e eventos.</p>
-
-            <div> <figure>
-                    <img src="https://picsum.photos/300/200?random=1" alt="Descrição da imagem 1." loading="lazy">
-                    <figcaption>Legenda da foto 1.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=2" alt="Descrição da imagem 2." loading="lazy">
-                    <figcaption>Legenda da foto 2.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=3" alt="Descrição da imagem 3." loading="lazy">
-                    <figcaption>Legenda da foto 3.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=4" alt="Descrição da imagem 4." loading="lazy">
-                    <figcaption>Legenda da foto 4.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=5" alt="Descrição da imagem 5." loading="lazy">
-                    <figcaption>Legenda da foto 5.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=6" alt="Descrição da imagem 6." loading="lazy">
-                    <figcaption>Legenda da foto 6.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=7" alt="Descrição da imagem 7." loading="lazy">
-                    <figcaption>Legenda da foto 7.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=8" alt="Descrição da imagem 8." loading="lazy">
-                    <figcaption>Legenda da foto 8.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=9" alt="Descrição da imagem 9." loading="lazy">
-                    <figcaption>Legenda da foto 9.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=10" alt="Descrição da imagem 10." loading="lazy">
-                    <figcaption>Legenda da foto 10.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=11" alt="Descrição da imagem 11." loading="lazy">
-                    <figcaption>Legenda da foto 11.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=12" alt="Descrição da imagem 12." loading="lazy">
-                    <figcaption>Legenda da foto 12.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=13" alt="Descrição da imagem 13." loading="lazy">
-                    <figcaption>Legenda da foto 13.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=14" alt="Descrição da imagem 14." loading="lazy">
-                    <figcaption>Legenda da foto 14.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=15" alt="Descrição da imagem 15." loading="lazy">
-                    <figcaption>Legenda da foto 15.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=16" alt="Descrição da imagem 16." loading="lazy">
-                    <figcaption>Legenda da foto 16.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=17" alt="Descrição da imagem 17." loading="lazy">
-                    <figcaption>Legenda da foto 17.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=18" alt="Descrição da imagem 18." loading="lazy">
-                    <figcaption>Legenda da foto 18.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=19" alt="Descrição da imagem 19." loading="lazy">
-                    <figcaption>Legenda da foto 19.</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://picsum.photos/300/200?random=20" alt="Descrição da imagem 20." loading="lazy">
-                    <figcaption>Legenda da foto 20.</figcaption>
-                </figure>
-                 </div>
-        </section>
-
-    </main>
+                <figcaption><strong>Depoimento de Carlos Andrade</strong> -
 
     <footer>
         <p><strong>ONG Vida Nova</strong></p>
