@@ -1,0 +1,33 @@
+# Documentação dos Gráficos e Visualizações
+
+Este documento especifica os detalhes técnicos e os objetivos de cada elemento gráfico implementado com a tag `<canvas>` no site da ONG Vida Nova.
+
+---
+
+### 1. Gráfico de Distribuição de Recursos
+
+* **Localização:** `paginas/transparencia.html`
+* **ID do Canvas:** `graficoRecursos`
+* **Objetivo:** Exibir visualmente como os recursos financeiros da ONG foram distribuídos entre os principais projetos durante o ano fiscal.
+* **Tipo de Gráfico:** Gráfico de Pizza.
+* **Observação:** A implementação atual em HTML/JS desenha uma forma básica como placeholder. A renderização final com dados reais será controlada por JavaScript.
+
+---
+
+### 2. Gráfico de Evolução de Voluntários
+
+* **Localização:** `paginas/voluntariado.html`
+* **ID do Canvas:** `graficoVoluntarios`
+* **Objetivo:** Mostrar o crescimento no número de voluntários ativos na organização ao longo do tempo (ex: nos últimos 3 anos), reforçando o engajamento da comunidade.
+* **Tipo de Gráfico:** Gráfico de Linha.
+* **Observação:** A implementação atual em HTML/JS desenha uma linha ascendente simples como placeholder. A renderização final com dados reais será controlada por JavaScript.
+
+---
+
+### 3. Gráfico de Impacto Social por Região
+
+* **Localização:** `paginas/projetos.html`
+* **ID do Canvas:** `graficoImpacto`
+* **Objetivo:** Comparar o número de famílias ou indivíduos atendidos em diferentes regiões geográficas, demonstrando o alcance e o foco territorial dos projetos.
+* **Tipo de Gráfico:** Gráfico de Barras.
+* **Observação:** A implementação atual em HTML/JS desenha três barras estáticas como placeholder. A renderização final com dados reais será controlada por JavaScript.
