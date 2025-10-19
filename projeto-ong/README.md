@@ -19,4 +19,4 @@ O projeto está organizado da seguinte forma:
 1.  Clone este repositório.
 2.  Abra a pasta do projeto no VS Code.
 3.  Instale a extensão "Live Server".
-4.  Clique com o botão direito no arquivo `paginas/index.html` e selecione "Open with Live Server".
+4.  Clique com o botão direito no arquivo `index.html` e selecione "Open with Live Server".
