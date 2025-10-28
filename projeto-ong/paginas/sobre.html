@@ -11,105 +11,133 @@
 <body>
 
     <header>
-        <h1><a href="index.html">ONG Vida Nova</a></h1>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="voluntariado.html">Seja Voluntário</a></li>
-                <li><a href="doacoes.html">Doações</a></li>
-                <li><a href="transparencia.html">Transparência</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contato.html">Contato</a></li>
+        <div class="container">
+            <h1><a href="index.html">ONG Vida Nova</a></h1>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">
+            &#9776; </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li class="menu-item-com-submenu"> <a href="projetos.html">Projetos</a> 
+            <ul class="submenu">
+                <li><a href="projetos.html#educacao">Educação</a></li>
+                <li><a href="projetos.html#capacitacao">Capacitação</a></li>
+                <li><a href="projetos.html#apoio-familias">Apoio a Famílias</a></li>
             </ul>
-        </nav>
+        </li>
+                    <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         
-        <h1>Conheça a Nossa História</h1>
+        <div class="container">
+            <h1>Conheça a Nossa História</h1>
+        </div>
 
         <section>
-            <h2>Como Tudo Começou</h2>
-            <p>A ONG Vida Nova foi fundada em 2010 por um grupo de educadores apaixonados que acreditavam no poder da educação para transformar realidades. O que começou como um pequeno grupo de reforço escolar em Diadema/SP, hoje se tornou uma organização que impacta centenas de vidas anualmente através de múltiplos projetos sociais.</p>
-            <p>Nossa jornada é marcada pela colaboração da comunidade, pela dedicação de nossos voluntários e pela transparência em cada ação que realizamos.</p>
+            <div class="container">
+                <h2>Como Tudo Começou</h2>
+                <p>A ONG Vida Nova foi fundada em 2010 por um grupo de educadores apaixonados que acreditavam no poder da educação para transformar realidades. O que começou como um pequeno grupo de reforço escolar em Diadema/SP, hoje se tornou uma organização que impacta centenas de vidas anualmente através de múltiplos projetos sociais.</p>
+                <p>Nossa jornada é marcada pela colaboração da comunidade, pela dedicação de nossos voluntários e pela transparência em cada ação que realizamos.</p>
+            </div>
         </section>
         
         <section>
-            <h2>Assista ao Nosso Vídeo Institucional</h2>
-            
-            <video controls poster="https://picsum.photos/600/350?random=10" style="max-width:100%;">
-                <source src="../assets/videos/video-institucional.mp4" type="video/mp4">
+            <div class="container">
+                <h2>Assista ao Nosso Vídeo Institucional</h2>
                 
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
+                <video controls poster="https://picsum.photos/600/350?random=10" style="max-width:100%; border-radius: 8px;">
+                    <source src="../assets/videos/video-institucional.mp4" type="video/mp4">
+                    
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
         </section>
 
         <section>
-            <h2>Missão, Visão e Valores</h2>
-            <h3>Missão</h3>
-            <p>Promover o desenvolvimento social e a igualdade de oportunidades através da educação, cultura e capacitação profissional para comunidades em situação de vulnerabilidade.</p>
-            
-            <h3>Visão</h3>
-            <p>Ser uma organização de referência no combate à desigualdade social, criando um futuro onde todos tenham acesso a uma educação de qualidade e a oportunidades de trabalho digno.</p>
+            <div class="container">
+                <h2>Missão, Visão e Valores</h2>
+                <h3>Missão</h3>
+                <p>Promover o desenvolvimento social e a igualdade de oportunidades através da educação, cultura e capacitação profissional para comunidades em situação de vulnerabilidade.</p>
+                
+                <h3>Visão</h3>
+                <p>Ser uma organização de referência no combate à desigualdade social, criando um futuro onde todos tenham acesso a uma educação de qualidade e a oportunidades de trabalho digno.</p>
 
-            <h3>Valores</h3>
-            <ul>
-                <li><strong>Comprometimento:</strong> Dedicação total à nossa causa e aos nossos beneficiários.</li>
-                <li><strong>Transparência:</strong> Gestão aberta e responsável dos recursos que nos são confiados.</li>
-                <li><strong>Inclusão:</strong> Respeito à diversidade e promoção de um ambiente acolhedor para todos.</li>
-                <li><strong>Inovação:</strong> Busca contínua por novas soluções para os desafios sociais.</li>
-            </ul>
+                <h3>Valores</h3>
+                <ul>
+                    <li><strong>Comprometimento:</strong> Dedicação total à nossa causa e aos nossos beneficiários.</li>
+                    <li><strong>Transparência:</strong> Gestão aberta e responsável dos recursos que nos são confiados.</li>
+                    <li><strong>Inclusão:</strong> Respeito à diversidade e promoção de um ambiente acolhedor para todos.</li>
+                    <li><strong>Inovação:</strong> Busca contínua por novas soluções para os desafios sociais.</li>
+                </ul>
+            </div>
         </section>
-        <hr>
+
        <section>
-            <h2>Nossa Equipe</h2>
-            
-            <article>
-                <picture>
-                    <source srcset="../assets/img/ana-costa.webp" type="image/webp">
-                    <img src="../assets/img/ana-costa.jpg" alt="Foto de Ana Costa" width="600" height="427">
-                </picture>
+            <div class="container">
+                <h2>Nossa Equipe</h2>
+                
+                <div class="row">
+                    
+                    <article class="card col-sm-6 col-md-4">
+                        <picture>
+                            <source srcset="../assets/img/maria-silva.webp" type="image/webp">
+                            <img src="../assets/img/maria-silva.jpg" alt="Foto de Maria Silva" width="200" height="200">
+                        </picture>
+                        <div class="card-conteudo">
+                            <h3>Maria Silva</h3>
+                            <p>Fundadora e Diretora Executiva</p>
+                            <p>Pedagoga com mais de 20 anos de experiência em projetos sociais.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="card col-sm-6 col-md-4">
+                        <picture>
+                            <source srcset="../assets/img/joao-pereira.webp" type="image/webp">
+                            <img src="../assets/img/joao-pereira.jpg" alt="Foto de João Pereira" width="200" height="200">
+                        </picture>
+                        <div class="card-conteudo">
+                            <h3>João Pereira</h3>
+                            <p>Coordenador de Projetos</p>
+                            <p>Especialista em gestão de projetos e responsável pela operação de nossas iniciativas.</p>
+                        </div>
+                    </article>
 
-                <h3>Maria Silva</h3>
-                <p>Fundadora e Diretora Executiva</p>
-                <p>Pedagoga com mais de 20 anos de experiência em projetos sociais.</p>
-            </article>
-            
-            <article>
-                <picture>
-                    <source srcset="../assets/img/joao-pereira.webp" type="image/webp">
-                    <img src="../assets/img/joao-pereira.jpg" alt="Foto de João Pereira" width="500" height="427">
-                </picture>
+                    <article class="card col-sm-6 col-md-4">
+                        <picture>
+                            <source srcset="../assets/img/ana-costa.webp" type="image/webp">
+                            <img src="../assets/img/ana-costa.jpg" alt="Foto de Ana Costa" width="200" height="200">
+                        </picture>
+                        <div class="card-conteudo">
+                            <h3>Ana Costa</h3>
+                            <p>Coordenadora de Voluntários</p>
+                            <p>Responsável por engajar e gerenciar nossa incrível rede de voluntários.</p>
+                        </div>
+                    </article>
 
-                <h3>João Pereira</h3>
-                <p>Coordenador de Projetos</p>
-                <p>Especialista em gestão de projetos e responsável pela operação de nossas iniciativas.</p>
-            </article>
-
-            <article>
-                <picture>
-                    <source srcset="../assets/img/maria-silva.webp" type="image/webp">
-                    <img src="../assets/img/maria-silva.jpg" alt="Foto de Maria Silva" width="600" height="450">
-                </picture>
-
-                <h3>Ana Costa</h3>
-                <p>Coordenadora de Voluntários</p>
-                <p>Responsável por engajar e gerenciar nossa incrível rede de voluntários.</p>
-            </article>
-
-        </section>
-        <hr>
+                </div> </div>
+       </section>
+       
     </main>
 
     <footer>
-        <p><strong>ONG Vida Nova</strong></p>
-        <p>Endereço: Rua da Esperança, 123 - Centro, Diadema/SP</p>
-        <p>Telefone: (11) 5555-1234 | E-mail: contato@ongvidanova.org.br</p>
-        <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
+        <div class="container">
+            <p><strong>ONG Vida Nova</strong></p>
+            <p>Endereço: Rua da Esperança, 123 - Centro, Diadema/SP</p>
+            <p>Telefone: (11) 5555-1234 | E-mail: contato@ongvidanova.org.br</p>
+            <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
+        </div>
     </footer>
-
+    <script src="../js/script.js"></script>
 </body>
 </html>

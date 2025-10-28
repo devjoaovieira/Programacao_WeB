@@ -1,0 +1,315 @@
+/* ============================================= */
+/* ARQUIVO: components.css                       */
+/* OBJETIVO: Estilos de componentes reutilizáveis*/
+/* ============================================= */
+
+/* ---------------------------------- */
+/* 1. TIPOGRAFIA BÁSICA               */
+/* ---------------------------------- */
+
+/* Aplicamos a fonte de títulos e peso */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte-familia-titulos);
+    font-weight: var(--fonte-peso-negrito);
+    color: var(--cor-primaria-escura);
+    margin-bottom: var(--espaco-p); /* 16px */
+}
+
+/* Estilos de link padrão */
+a {
+    color: var(--cor-primaria);
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: var(--cor-primaria-escura);
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+/* ---------------------------------- */
+/* 2. BOTÕES (COM ESTADOS VISUAIS)    */
+/* ---------------------------------- */
+
+/* Estilo base para todos os botões e links com a classe .btn */
+.btn {
+    display: inline-block; /* Permite aplicar padding e margin */
+    padding: var(--espaco-pp) var(--espaco-m); /* 8px 24px */
+    border: none;
+    border-radius: 4px;
+    font-family: var(--fonte-familia-principal);
+    font-size: var(--fonte-tamanho-p);
+    font-weight: var(--fonte-peso-negrito);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Variante: Botão Primário (cor de destaque) */
+.btn-primario {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria-escura);
+}
+
+/* --- Estados Visuais (Requisito) --- */
+
+/* Estado :hover (mouse em cima) */
+.btn-primario:hover, .btn-primario:focus {
+    background-color: #ffb733; /* Laranja um pouco mais claro */
+    color: var(--cor-primaria-escura);
+    text-decoration: none;
+    transform: translateY(-2px); /* Efeito de "levantar" */
+}
+
+/* Estado :active (clicando) */
+.btn-primario:active {
+    transform: translateY(1px); /* Efeito de "pressionar" */
+    background-color: #e69500; /* Laranja mais escuro */
+}
+
+/* ---------------------------------- */
+/* 3. CARDS (PARA PROJETOS, BLOG)     */
+/* ---------------------------------- */
+
+.card {
+    background-color: var(--cor-fundo);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Garante que a imagem respeite o border-radius */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Faz a imagem ocupar 100% da largura do card */
+.card img {
+    width: 100%;
+    height: auto; /* Mantém a proporção */
+    display: block;
+}
+
+/* Padding para o conteúdo de texto do card */
+.card-conteudo {
+    padding: var(--espaco-m); /* 24px */
+}
+
+.card-conteudo h3 {
+    font-size: var(--fonte-tamanho-m);
+}
+
+.card-conteudo p {
+    font-size: var(--fonte-tamanho-pp);
+    color: var(--cor-texto-secundario);
+    margin-bottom: var(--espaco-p);
+}
+
+/* Utilidade para botões com largura total */
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* ---------------------------------- */
+/* 4. LISTAS (UL / OL)                */
+/* ---------------------------------- */
+
+/*
+ * Devolve a indentação padrão para listas
+ * que foi removida pelo nosso reset global.
+ */
+main ul, 
+main ol {
+    /* Adiciona a indentação à esquerda para os bullets */
+    padding-left: var(--espaco-m); /* 24px */
+    
+    /* Adiciona um espaço abaixo da lista inteira */
+    margin-bottom: var(--espaco-p); /* 16px */
+}
+
+/* Adiciona um pequeno espaço entre cada item da lista */
+main li {
+    margin-bottom: var(--espaco-pp); /* 8px */
+}
+
+/* ---------------------------------- */
+/* 5. FORMULÁRIOS                     */
+/* ---------------------------------- */
+
+/* Estilo base para os rótulos (labels) */
+label {
+    display: block; /* Garante que o <br> funcione */
+    margin-bottom: var(--espaco-pp); /* 8px */
+    font-weight: var(--fonte-peso-negrito);
+    color: var(--cor-texto-secundario);
+}
+
+/* Estilo base para campos de texto, email, tel, data, numero,
+   áreas de texto e listas suspensas */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+textarea,
+select {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: var(--espaco-p); /* 16px */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--fonte-familia-principal);
+    font-size: var(--fonte-tamanho-p);
+    margin-bottom: var(--espaco-p); /* 16px */
+    transition: border-color 0.3s ease;
+}
+
+/* Remove a aparência padrão do textarea (redimensionamento vertical apenas) */
+textarea {
+    resize: vertical;
+}
+
+/* Estilo quando um campo está em foco (selecionado) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    outline: none; /* Remove o contorno padrão do navegador */
+    border-color: var(--cor-primaria); /* Muda a cor da borda para a cor primária */
+    box-shadow: 0 0 5px rgba(0, 90, 156, 0.3); /* Adiciona uma sombra suave */
+}
+
+/* Estilo para agrupar campos */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: var(--espaco-m); /* 24px */
+    margin-bottom: var(--espaco-g); /* 32px */
+}
+
+/* Estilo para o título do fieldset */
+legend {
+    font-family: var(--fonte-familia-titulos);
+    font-weight: var(--fonte-peso-negrito);
+    color: var(--cor-primaria-escura);
+    padding: 0 var(--espaco-pp); /* 8px */
+    margin-left: calc(-1 * var(--espaco-pp)); /* Alinha com a borda */
+}
+
+/* Estilo para checkboxes e radios (um pouco mais avançado para customizar) */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: var(--espaco-pp); /* 8px */
+    /* Escondemos o input padrão para criar um customizado */
+    appearance: none; 
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    position: relative;
+    top: 3px; /* Alinha verticalmente com o label */
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    border-radius: 3px; /* Quadrado para checkbox */
+}
+input[type="radio"] {
+    border-radius: 50%; /* Círculo para radio */
+}
+/* Estilo quando selecionado */
+input[type="checkbox"]:checked::before,
+input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--cor-primaria);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+input[type="checkbox"]:checked::before {
+    border-radius: 2px;
+}
+input[type="radio"]:checked::before {
+    border-radius: 50%;
+}
+/* Melhora o espaçamento do label ao lado do checkbox/radio */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block;
+    font-weight: var(--fonte-peso-regular);
+    margin-right: var(--espaco-p); /* 16px */
+    margin-bottom: var(--espaco-pp); /* 8px */
+}
+
+/* --- Validação Visual (Requisito) --- */
+
+/* Adiciona um asterisco vermelho para campos obrigatórios */
+label:has(+ :required)::after {
+    content: ' *';
+    color: red;
+    font-weight: var(--fonte-peso-negrito);
+}
+/* Estilo para campos inválidos (ex: email incorreto, campo obrigatório vazio) */
+input:invalid,
+textarea:invalid,
+select:invalid {
+    border-color: #e74c3c; /* Vermelho */
+}
+
+/* ---------------------------------- */
+/* 6. BADGES / TAGS                   */
+/* ---------------------------------- */
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem; /* Espaçamento interno pequeno */
+    font-size: var(--fonte-tamanho-pp); /* Fonte pequena */
+    font-weight: var(--fonte-peso-negrito);
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem; /* Borda levemente arredondada */
+
+    /* Cores padrão (pode criar variações: .badge-primario, etc.) */
+    color: var(--cor-texto-secundario);
+    background-color: var(--cor-fundo-alternativa);
+    border: 1px solid #ddd;
+}
+
+/* ---------------------------------- */
+/* 7. ALERTAS (FEEDBACK VISUAL)       */
+/* ---------------------------------- */
+
+.alert {
+    padding: var(--espaco-p);         /* 16px */
+    margin-bottom: var(--espaco-p);   /* 16px */
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: var(--fonte-tamanho-pp); /* 14px */
+}
+
+/* Alerta de Sucesso */
+.alert-success {
+    color: #155724; /* Verde escuro */
+    background-color: #d4edda; /* Verde claro */
+    border-color: #c3e6cb;
+}
+
+/* Alerta de Erro */
+.alert-error {
+    color: #721c24; /* Vermelho escuro */
+    background-color: #f8d7da; /* Vermelho claro */
+    border-color: #f5c6cb;
+}
+
+
