@@ -1,0 +1,43 @@
+algoritmo "Monitoramento_Cesta_Basica"
+var
+   nome, situacao: caractere
+   preco_anterior, preco_atual, variacao: real
+   i: inteiro
+inicio
+   // Repetir para 3 produtos
+   para i de 1 ate 3 faca
+      escreva("Digite o nome do produto: ")
+      leia(nome)
+
+      escreva("Digite o preço do mês anterior (R$): ")
+      leia(preco_anterior)
+
+      escreva("Digite o preço do mês atual (R$): ")
+      leia(preco_atual)
+
+      // Calcular variação percentual
+      variacao := ((preco_atual - preco_anterior) / preco_anterior) * 100
+
+      // Classificar situação
+      se variacao > 0 entao
+         situacao := "AUMENTO"
+         se variacao > 10 entao
+            situacao := situacao + " ABUSIVO"
+         fimse
+      senao
+         se variacao < 0 entao
+            situacao := "QUEDA"
+         senao
+            situacao := "ESTAVEL"
+         fimse
+      fimse
+
+      // Exibir resumo do produto
+      escreval("Produto: ", nome)
+      escreval("Preço anterior: R$ ", preco_anterior:2:2)
+      escreval("Preço atual: R$ ", preco_atual:2:2)
+      escreval("Variação: ", variacao:2:2, "%")
+      escreval("Situação: ", situacao)
+      escreval("-------------------------------")
+   fimpara
+fimalgoritmo
