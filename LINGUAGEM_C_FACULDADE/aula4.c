@@ -1,10 +1,3 @@
-/*
- * PROJETO: Ordenação Bubble Sort (Método Bolha)
- * TEMA: Preços de Produtos
- * OBJETIVO: Aplicar o Bubble Sort para ordenar um vetor em ordem Crescente e Decrescente.
- * AUTOR: [Seu Nome]
- */
-
 #include <stdio.h>
 
 int main() {
@@ -64,8 +57,7 @@ int main() {
     // =======================================================
     printf("--- ORDENAÇÃO DECRESCENTE ---\n");
     
-    // NOTA: Reutilizamos o vetor 'preco', que já está ordenado (o que é ótimo, pois
-    // testamos a ordenação decrescente em um vetor perfeitamente crescente).
+    // Reutilizando o vetor 'preco', que já está ordenado
     
     // LOOP EXTERNO (i): Repetição das passagens (mesma estrutura)
     for (i = 0; i < 9; i++) { 
