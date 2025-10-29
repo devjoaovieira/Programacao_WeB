@@ -312,4 +312,71 @@ select:invalid {
     border-color: #f5c6cb;
 }
 
+/* ---------------------------------- */
+/* 8. VALIDAÇÃO DE FORMULÁRIO (FEEDBACK) */
+/* ---------------------------------- */
 
+/* Estilo para campos inválidos (detectado pelo JS ou HTML5) */
+input:invalid,
+textarea:invalid,
+select:invalid {
+    border-color: #e74c3c; /* Vermelho */
+}
+
+/* Classe adicionada via JS para reforçar visualmente o erro */
+.campo-invalido {
+    border-color: #e74c3c !important; /* Usa !important para garantir a sobreposição */
+    background-color: #fdd; /* Fundo levemente rosado */
+}
+
+/* Estilo para as mensagens de erro (escondidas por padrão) */
+.mensagem-erro {
+    color: #e74c3c; /* Vermelho */
+    font-size: var(--fonte-tamanho-pp); /* Tamanho pequeno */
+    display: none; /* Escondida por padrão */
+    margin-top: calc(-1 * var(--espaco-p) + 4px); /* Puxa para cima, logo abaixo do campo */
+    margin-bottom: var(--espaco-p); /* Espaço antes do próximo campo */
+}
+
+/* Classe adicionada via JS para mostrar a mensagem */
+.mensagem-erro.visivel {
+    display: block; /* Torna a mensagem visível */
+}
+
+/* ---------------------------------- */
+/* 9. GRÁFICOS (CANVAS) RESPONSIVOS   */
+/* ---------------------------------- */
+
+canvas {
+    max-width: 100%; /* Garante que o canvas nunca seja maior que seu container */
+    height: auto;    /* Mantém a proporção de altura definida no HTML (ou JS) */
+    display: block;  /* Remove espaços extras que podem aparecer abaixo do canvas */
+}
+
+/* --- Força Altura Consistente para Imagens nos Cards de Projeto/Blog/Equipe --- */
+
+/* Aplica a partir de SM (quando começam a ficar lado a lado) */
+@media (min-width: 768px) { 
+    /* Seleciona a tag <picture> DENTRO de um .card que TAMBÉM é uma coluna */
+    .card[class*="col-"] > picture {
+        display: block; /* Garante que picture se comporte como bloco */
+        overflow: hidden; /* Esconde qualquer parte da imagem que transborde */
+        height: 200px; /* << AJUSTE ESSA ALTURA conforme o visual desejado */
+        background-color: #eee; /* Cor de fundo enquanto a imagem carrega */
+    }
+
+    /* Seleciona a tag <img> DENTRO da <picture> acima */
+    .card[class*="col-"] > picture > img {
+        width: 100%;
+        height: 100%; /* Faz a imagem tentar preencher a altura da <picture> */
+        object-fit: cover; /* Redimensiona a imagem para manter a proporção enquanto preenche o espaço, cortando o excesso */
+        object-position: center; /* Centraliza a imagem antes de cortar */
+    }
+}
+
+/* (Opcional) Ajuste fino para telas maiores, se necessário */
+/* @media (min-width: 992px) { 
+    .card[class*="col-"] > picture {
+        height: 220px; 
+    }
+} */

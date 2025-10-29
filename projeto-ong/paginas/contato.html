@@ -22,12 +22,12 @@
                     <li><a href="index.html">Início</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
                     <li class="menu-item-com-submenu"> <a href="projetos.html">Projetos</a> 
-            <ul class="submenu">
-                <li><a href="projetos.html#educacao">Educação</a></li>
-                <li><a href="projetos.html#capacitacao">Capacitação</a></li>
-                <li><a href="projetos.html#apoio-familias">Apoio a Famílias</a></li>
-            </ul>
-        </li>
+                        <ul class="submenu">
+                            <li><a href="projetos.html#educacao">Educação</a></li>
+                            <li><a href="projetos.html#capacitacao">Capacitação</a></li>
+                            <li><a href="projetos.html#apoio-familias">Apoio a Famílias</a></li>
+                        </ul>
+                    </li>
                     <li><a href="voluntariado.html">Seja Voluntário</a></li>
                     <li><a href="doacoes.html">Doações</a></li>
                     <li><a href="transparencia.html">Transparência</a></li>
@@ -38,7 +38,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <div class="container">
             <h1>Entre em Contato</h1>
 
@@ -70,10 +70,14 @@
                             <legend>Formulário de Contato</legend>
 
                             <label for="nome_contato">Seu Nome:</label><br>
-                            <input type="text" id="nome_contato" name="nome_contato" required placeholder="Digite seu nome completo"><br><br>
+                            <input type="text" id="nome_contato" name="nome_contato" required placeholder="Digite seu nome completo"><br>
+                            <span class="mensagem-erro" id="erro-nome">Por favor, preencha seu nome.</span>
+                            <br> 
 
                             <label for="email_contato">Seu E-mail:</label><br>
-                            <input type="email" id="email_contato" name="email_contato" required placeholder="seuemail@exemplo.com"><br><br>
+                            <input type="email" id="email_contato" name="email_contato" required placeholder="seuemail@exemplo.com"><br>
+                            <span class="mensagem-erro" id="erro-email">Por favor, insira um e-mail válido.</span>
+                            <br>
 
                             <label for="assunto">Assunto:</label><br>
                             <select id="assunto" name="assunto" required>
@@ -83,10 +87,14 @@
                                 <option value="parcerias">Proposta de Parceria</option>
                                 <option value="imprensa">Imprensa</option>
                                 <option value="outro">Outro Assunto</option>
-                            </select><br><br>
+                            </select><br>
+                            <span class="mensagem-erro" id="erro-assunto">Por favor, selecione um assunto.</span>
+                            <br>
 
                             <label for="mensagem">Sua Mensagem:</label><br>
-                            <textarea id="mensagem" name="mensagem" rows="8" cols="50" required placeholder="Escreva sua mensagem aqui..."></textarea><br><br>
+                            <textarea id="mensagem" name="mensagem" rows="8" cols="50" required placeholder="Escreva sua mensagem aqui..."></textarea><br>
+                            <span class="mensagem-erro" id="erro-mensagem">Por favor, escreva sua mensagem.</span>
+                            <br>
                             
                             <label for="anexo">Anexar um arquivo (opcional):</label><br>
                             <input type="file" id="anexo" name="anexo" accept=".pdf,.doc,.docx,.jpg,.png"><br><br>
