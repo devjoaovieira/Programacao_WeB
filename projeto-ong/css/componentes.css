@@ -49,23 +49,27 @@ a:hover, a:focus {
 /* Variante: Botão Primário (cor de destaque) */
 .btn-primario {
     background-color: var(--cor-secundaria);
-    color: var(--cor-primaria-escura);
+    /* ALTERADO: Usando cor de texto principal para melhor contraste */
+    color: var(--cor-texto-principal); 
 }
 
 /* --- Estados Visuais (Requisito) --- */
 
 /* Estado :hover (mouse em cima) */
 .btn-primario:hover, .btn-primario:focus {
-    background-color: #ffb733; /* Laranja um pouco mais claro */
-    color: var(--cor-primaria-escura);
+    background-color: #ffb733; 
+    /* Garante que a cor do texto permaneça contrastante */
+    color: var(--cor-texto-principal); 
     text-decoration: none;
-    transform: translateY(-2px); /* Efeito de "levantar" */
+    transform: translateY(-2px); 
 }
 
 /* Estado :active (clicando) */
 .btn-primario:active {
-    transform: translateY(1px); /* Efeito de "pressionar" */
-    background-color: #e69500; /* Laranja mais escuro */
+    transform: translateY(1px); 
+    background-color: #e69500; 
+    /* Garante que a cor do texto permaneça contrastante */
+    color: var(--cor-texto-principal);
 }
 
 /* ---------------------------------- */
