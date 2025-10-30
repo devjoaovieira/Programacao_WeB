@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Acompanhe as últimas notícias, eventos e histórias de impacto da ONG Vida Nova.">
-    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/base.min.css"> 
+    <link rel="stylesheet" href="../css/layout.min.css"> 
+    <link rel="stylesheet" href="../css/components.min.css">
     
     <title>Blog | ONG Vida Nova</title>
 </head>
@@ -17,27 +19,34 @@
             <button class="menu-toggle" aria-label="Abrir menu">
             &#9776; </button>
             
-            <nav>
+            <nav role="navigation" aria-label="Menu principal">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
                     <li class="menu-item-com-submenu"> <a href="projetos.html">Projetos</a> 
-            <ul class="submenu">
-                <li><a href="projetos.html#educacao">Educação</a></li>
-                <li><a href="projetos.html#capacitacao">Capacitação</a></li>
-                <li><a href="projetos.html#apoio-familias">Apoio a Famílias</a></li>
-            </ul>
+                        <ul class="submenu">
+                            <li><a href="projetos.html#educacao">Educação</a></li>
+                            <li><a href="projetos.html#capacitacao">Capacitação</a></li>
+                            <li><a href="projetos.html#apoio-familias">Apoio a Famílias</a></li>
+                        </ul>
+                    </li>
                     <li><a href="voluntariado.html">Seja Voluntário</a></li>
                     <li><a href="doacoes.html">Doações</a></li>
                     <li><a href="transparencia.html">Transparência</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contato.html">Contato</a></li>
+
+                    <li class="li-theme-toggle">
+                        <button id="theme-toggle" class="btn" aria-label="Alternar para modo escuro">
+                            Modo Escuro
+                        </button>
+                    </li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" role="main">
         <div class="container">
             <h1>Blog e Notícias</h1>
 
@@ -84,7 +93,9 @@
                             
                             <form action="#" method="post">
                                 <label for="email_news">Seu melhor e-mail:</label><br>
-                                <input type="email" id="email_news" name="email_news" required placeholder="seuemail@exemplo.com"><br><br>
+                                <input type="email" id="email_news" name="email_news" required placeholder="seuemail@exemplo.com" aria-describedby="erro-email-news"><br>
+                                <span class="mensagem-erro" id="erro-email-news">Por favor, insira um e-mail válido.</span>
+                                <br>
 
                                 <fieldset>
                                     <legend>Quais assuntos te interessam?</legend>
@@ -124,6 +135,6 @@
             <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="../js/script.js"></script>
+    <script src="../js/script.min.js"></script>
 </body>
 </html>
