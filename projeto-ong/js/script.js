@@ -283,3 +283,61 @@ const cardEducacaoHTML = criarCardProjeto(projetoEducacao);
 */
 
 // --- FIM: Funções Template ---
+
+/* ============================================= */
+/* 7. FUNCIONALIDADE: MODO ESCURO (THEME TOGGLE) */
+/* ============================================= */
+
+// Função auto-executável (IIFE) para encapsular a lógica do modo escuro
+(function() {
+    // Seleciona o botão de alternância de tema
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    // Verifica se o botão existe na página (ele não existirá no HTML sendo carregado pela SPA)
+    // Precisamos garantir que ele seja pego do DOM principal, por isso selecionamos fora da lógica da SPA
+    if (!themeToggle) {
+        console.log('Botão de tema não encontrado (talvez em conteúdo carregado pela SPA). A lógica de clique pode falhar.');
+        // Nota: Se o header for carregado pela SPA, esta lógica precisará ser movida/reiniciada
+    }
+
+    // Pega a preferência salva do usuário (ou 'light' se for a primeira visita)
+    let currentTheme = localStorage.getItem('theme') || 'light';
+
+    // Função para aplicar o tema (adicionar/remover classe e atualizar botão)
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-mode');
+            if (themeToggle) {
+                themeToggle.textContent = 'Modo Claro';
+                themeToggle.setAttribute('aria-label', 'Alternar para modo claro');
+            }
+        } else {
+            document.body.classList.remove('dark-mode');
+            if (themeToggle) {
+                themeToggle.textContent = 'Modo Escuro';
+                themeToggle.setAttribute('aria-label', 'Alternar para modo escuro');
+            }
+        }
+    }
+
+    // Aplica o tema salvo assim que a página carrega
+    applyTheme(currentTheme);
+
+    // Adiciona o listener de clique ao botão, se ele foi encontrado
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            // Inverte o tema atual
+            let newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+            
+            // Aplica o novo tema
+            applyTheme(newTheme);
+            
+            // Salva a nova preferência no localStorage
+            localStorage.setItem('theme', newTheme);
+            console.log(`Tema alterado para: ${newTheme}`);
+        });
+    }
+
+})(); // Fim da IIFE
+
+// --- FIM: MODO ESCURO ---

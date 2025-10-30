@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Entre em contato com a ONG Vida Nova. Envie sua mensagem, tire dúvidas ou venha nos visitar.">
-    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/base.min.css"> 
+    <link rel="stylesheet" href="../css/layout.min.css"> 
+    <link rel="stylesheet" href="../css/components.min.css">
     
     <title>Contato | ONG Vida Nova</title>
 </head>
@@ -17,9 +19,8 @@
             <button class="menu-toggle" aria-label="Abrir menu">
             &#9776; </button>
             
-            <nav>
+            <nav role="navigation" aria-label="Menu principal">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
                     <li class="menu-item-com-submenu"> <a href="projetos.html">Projetos</a> 
                         <ul class="submenu">
@@ -33,12 +34,19 @@
                     <li><a href="transparencia.html">Transparência</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contato.html">Contato</a></li>
+
+                    <li class="li-theme-toggle">
+                        <button id="theme-toggle" class="btn" aria-label="Alternar para modo escuro">
+                            Modo Escuro
+                        </button>
+                    </li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" role="main">
         <div class="container">
             <h1>Entre em Contato</h1>
 
@@ -70,17 +78,18 @@
                             <legend>Formulário de Contato</legend>
 
                             <label for="nome_contato">Seu Nome:</label><br>
-                            <input type="text" id="nome_contato" name="nome_contato" required placeholder="Digite seu nome completo"><br>
+                            <input type="text" id="nome_contato" name="nome_contato" required placeholder="Digite seu nome completo" aria-describedby="erro-nome"> <br>
                             <span class="mensagem-erro" id="erro-nome">Por favor, preencha seu nome.</span>
                             <br> 
 
                             <label for="email_contato">Seu E-mail:</label><br>
-                            <input type="email" id="email_contato" name="email_contato" required placeholder="seuemail@exemplo.com"><br>
+                            <input type="email" id="email_contato" name="email_contato" required placeholder="seuemail@exemplo.com" aria-describedby="erro-email"> <br>
                             <span class="mensagem-erro" id="erro-email">Por favor, insira um e-mail válido.</span>
                             <br>
 
+
                             <label for="assunto">Assunto:</label><br>
-                            <select id="assunto" name="assunto" required>
+                            <select id="assunto" name="assunto" required aria-describedby="erro-assunto">
                                 <option value="">-- Selecione o motivo do contato --</option>
                                 <option value="doacoes">Informações sobre Doações</option>
                                 <option value="voluntariado">Quero ser Voluntário</option>
@@ -92,7 +101,7 @@
                             <br>
 
                             <label for="mensagem">Sua Mensagem:</label><br>
-                            <textarea id="mensagem" name="mensagem" rows="8" cols="50" required placeholder="Escreva sua mensagem aqui..."></textarea><br>
+                            <textarea id="mensagem" name="mensagem" rows="8" cols="50" required placeholder="Escreva sua mensagem aqui..." aria-describedby="erro-mensagem"></textarea><br>
                             <span class="mensagem-erro" id="erro-mensagem">Por favor, escreva sua mensagem.</span>
                             <br>
                             
@@ -118,6 +127,6 @@
             <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="../js/script.js"></script>
+    <script src="../js/script.min.js"></script>
 </body>
 </html>

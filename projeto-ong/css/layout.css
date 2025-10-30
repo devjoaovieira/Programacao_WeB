@@ -297,3 +297,93 @@ header nav ul.submenu a {
     .col-lg-11 { width: 91.666667%; }
     .col-lg-12 { width: 100%; }
 }
+
+/* --- Correção de Contraste para o Logo/Título no Header --- */
+header h1 a {
+    color: var(--cor-fundo); /* Define a cor do link como branco */
+    text-decoration: none; /* Remove sublinhado padrão do link */
+}
+
+/* Opcional: Estilo hover específico para o logo, se desejar */
+header h1 a:hover,
+header h1 a:focus {
+    color: var(--cor-secundaria); /* Muda para laranja no hover/focus */
+    text-decoration: none; /* Mantém sem sublinhado */
+}
+
+/* ============================================= */
+/* 7. BOTÃO DE TEMA (MODO ESCURO)                */
+/* ============================================= */
+
+/* Estilo para o <li> que contém o botão */
+header nav li.li-theme-toggle {
+    border-bottom: none;
+    margin-left: var(--espaco-m); /* Mesmo espaçamento dos outros itens de menu */
+}
+
+/* Estilo para o botão de tema (para parecer um link de menu) */
+#theme-toggle {
+    /* 1. Remove aparência de botão */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+    /* 2. Aplica o mesmo estilo dos links do menu (copiado de 'header nav a') */
+    font-family: var(--fonte-familia-principal); /* Garante a mesma fonte */
+    font-size: var(--fonte-tamanho-p); /* Garante o mesmo tamanho */
+    padding: var(--espaco-pp) 0; 
+    color: var(--cor-fundo);
+    font-weight: var(--fonte-peso-regular);
+    position: relative; 
+    display: inline-block; 
+    transition: color 0.3s ease; /* Transição de cor */
+}
+
+/* 3. Aplica o mesmo estado :hover dos links do menu */
+#theme-toggle:hover, 
+#theme-toggle:focus {
+    background-color: transparent;
+    color: var(--cor-secundaria); /* Fica laranja no hover */
+    text-decoration: none;
+    outline: none; /* Remove outline de foco do botão */
+}
+
+/* 4. Estilo no Modo Escuro (para parecer um link) */
+body.dark-mode #theme-toggle {
+    color: var(--dm-cor-texto-principal);
+}
+body.dark-mode #theme-toggle:hover,
+body.dark-mode #theme-toggle:focus {
+    color: var(--cor-secundaria);
+}
+
+/* 5. Estilo no Menu Mobile */
+@media (max-width: 991px) {
+    header nav li.li-theme-toggle {
+        margin-left: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    #theme-toggle {
+        /* Para parecer um link de menu mobile */
+        display: block;
+        width: 100%;
+        padding: var(--espaco-p); /* Mesmo padding dos outros links mobile */
+        color: var(--cor-fundo);
+        font-weight: var(--fonte-peso-negrito);
+    }
+    #theme-toggle:hover,
+    #theme-toggle:focus {
+        background-color: var(--cor-primaria); /* Mesmo hover dos links mobile */
+        color: var(--cor-fundo);
+    }
+    
+    /* Cor no modo escuro mobile */
+    body.dark-mode #theme-toggle {
+        color: var(--dm-cor-texto-principal);
+    }
+     body.dark-mode #theme-toggle:hover,
+     body.dark-mode #theme-toggle:focus {
+        background-color: var(--cor-primaria-clara);
+    }
+}
