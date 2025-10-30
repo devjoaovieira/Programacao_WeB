@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seja um voluntário na ONG Vida Nova e ajude a transformar vidas. Conheça as áreas de atuação e preencha nosso formulário de cadastro.">
+    <link rel="stylesheet" href="../css/base.min.css"> 
+    <link rel="stylesheet" href="../css/layout.min.css"> 
+    <link rel="stylesheet" href="../css/components.min.css">
+    
+    <title>Seja Voluntário | ONG Vida Nova</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="index.html">ONG Vida Nova</a></h1>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">
+            &#9776; </button>
+            
+            <nav role="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li class="menu-item-com-submenu"> <a href="projetos.html">Projetos</a> 
+                        <ul class="submenu">
+                            <li><a href="projetos.html#educacao">Educação</a></li>
+                            <li><a href="projetos.html#capacitacao">Capacitação</a></li>
+                            <li><a href="projetos.html#apoio-familias">Apoio a Famílias</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+
+                    <li class="li-theme-toggle">
+                        <button id="theme-toggle" class="btn" aria-label="Alternar para modo escuro">
+                            Modo Escuro
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        
+        <div class="container">
+            <h1>Seja um Voluntário</h1>
+        </div>
+
+        <section>
+            <div class="container">
+                <h2>Sua Ajuda Constrói o Futuro</h2>
+                <p>O tempo é um dos bens mais preciosos que podemos doar. Ao se tornar um voluntário da ONG Vida Nova, você se junta a uma rede de pessoas engajadas que dedicam seu talento e energia para criar um impacto real e duradouro na vida de centenas de pessoas.</p>
+                <p>Não importa qual seja sua habilidade, ela é bem-vinda e necessária. Junte-se a nós!</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Onde Você Pode Atuar</h2>
+                <ul>
+                    <li><strong>Educação:</strong> Dando aulas de reforço, ajudando em oficinas de leitura e artes.</li>
+                    <li><strong>Mentoria Profissional:</strong> Orientando jovens e adultos em suas carreiras.</li>
+                    <li><strong>Eventos:</strong> Ajudando na organização e execução de nossas campanhas e eventos de arrecadação.</li>
+                    <li><strong>Comunicação:</strong> Criando conteúdo para nossas redes sociais e site.</li>
+                    <li><strong>Administrativo:</strong> Apoiando nas tarefas de organização interna da ONG.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Nossa Comunidade em Crescimento</h2>
+                <p>Ano após ano, mais pessoas se juntam à nossa causa. Veja a evolução do nosso número de voluntários ativos.</p>
+
+                <canvas id="graficoVoluntarios" width="400" height="250"></canvas>
+
+                <script>
+                    const canvasLinha = document.getElementById('graficoVoluntarios');
+                    const ctxLinha = canvasLinha.getContext('2d');
+                    ctxLinha.strokeStyle = '#2E8B57';
+                    ctxLinha.lineWidth = 3;
+                    ctxLinha.beginPath();
+                    ctxLinha.moveTo(50, 200);
+                    ctxLinha.lineTo(150, 150);
+                    ctxLinha.lineTo(250, 100);
+                    ctxLinha.lineTo(350, 50);
+                    ctxLinha.stroke();
+                </script>
+                <p><em>Gráfico ilustrativo. A implementação completa dos dados será feita com JavaScript.</em></p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Formulário de Cadastro</h2>
+                <p>Preencha o formulário abaixo e nossa equipe entrará em contato em breve. Obrigado pelo seu interesse!</p>
+                
+                <form action="#" method="post"> 
+                    <fieldset>
+                        <legend>Seus Dados Pessoais</legend>
+
+                        <label for="nome">Nome Completo:</label><br>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo" aria-describedby="erro-nome-voluntario"><br>
+                        <span class="mensagem-erro" id="erro-nome-voluntario">Por favor, preencha seu nome completo.</span>
+                        <br>
+
+                        <label for="email">Melhor E-mail:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="exemplo@exemplo.com" aria-describedby="erro-email-voluntario"><br>
+                        <span class="mensagem-erro" id="erro-email-voluntario">Por favor, insira um e-mail válido.</span>
+                        <br>
+
+                        <label for="telefone">Telefone (com DDD):</label><br>
+                        <input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required placeholder="(11) 99999-9999" aria-describedby="erro-telefone-voluntario"><br>
+                        <span class="mensagem-erro" id="erro-telefone-voluntario">Por favor, insira um telefone válido (ex: (11) 99999-9999).</span>
+                        <br>
+
+                        <label for="nascimento">Data de Nascimento:</label><br>
+                        <input type="date" id="nascimento" name="nascimento" required aria-describedby="erro-nascimento-voluntario"><br>
+                        <span class="mensagem-erro" id="erro-nascimento-voluntario">Por favor, insira sua data de nascimento.</span>
+                        <br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Interesses e Disponibilidade</legend>
+
+                        <p>Quais são suas áreas de interesse para voluntariado? (Marque quantas quiser)</p>
+                        <input type="checkbox" id="interesse_educacao" name="interesse" value="educacao">
+                        <label for="interesse_educacao">Educação e Aulas</label><br>
+                        <input type="checkbox" id="interesse_eventos" name="interesse" value="eventos">
+                        <label for="interesse_eventos">Organização de Eventos</label><br>
+                        <input type="checkbox" id="interesse_comunicacao" name="interesse" value="comunicacao">
+                        <label for="interesse_comunicacao">Comunicação e Mídias Sociais</label><br>
+                        <input type="checkbox" id="interesse_admin" name="interesse" value="admin">
+                        <label for="interesse_admin">Tarefas Administrativas</label><br><br>
+
+                        <label for="disponibilidade">Qual sua disponibilidade semanal?</label><br>
+                        <select id="disponibilidade" name="disponibilidade" required aria-describedby="erro-disponibilidade-voluntario">
+                            <option value="">--Selecione uma opção--</option>
+                            <option value="ate_4h">Até 4 horas por semana</option>
+                            <option value="4_a_8h">De 4 a 8 horas por semana</option>
+                            <option value="mais_de_8h">Mais de 8 horas por semana</option>
+                            <option value="eventual">Apenas em eventos específicos</option>
+                        </select><br>
+                        <span class="mensagem-erro" id="erro-disponibilidade-voluntario">Por favor, selecione sua disponibilidade.</span>
+                        <br>
+
+                        <label for="motivacao">Por que você gostaria de ser voluntário na ONG Vida Nova?</label><br>
+                        <textarea id="motivacao" name="motivacao" rows="6" cols="50" required placeholder="Conte-nos um pouco sobre sua motivação..." aria-describedby="erro-motivacao-voluntario"></textarea><br>
+                        <span class="mensagem-erro" id="erro-motivacao-voluntario">Por favor, conte-nos sua motivação.</span>
+                        <br>
+                    </fieldset>
+                    
+                    <input type="submit" value="Enviar Cadastro" class="btn btn-primario btn-block">
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>ONG Vida Nova</strong></p>
+            <p>Endereço: Rua da Esperança, 123 - Centro, Diadema/SP</p>
+            <p>Telefone: (11) 5555-1234 | E-mail: contato@ongvidanova.org.br</p>
+            <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../js/script.min.js"></script>
+</body>
+</html>

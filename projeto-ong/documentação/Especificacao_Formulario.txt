@@ -1,0 +1,66 @@
+# Documentação e Especificação dos Formulários
+
+Este documento detalha a estrutura e as regras de validação para cada um dos formulários implementados no site da ONG Vida Nova, conforme os requisitos da primeira entrega do projeto.
+
+---
+
+### 1. Formulário de Cadastro de Voluntário
+
+* **Localização:** `paginas/voluntariado.html`
+* **Objetivo:** Coletar informações de contato, interesse e disponibilidade de indivíduos que desejam se voluntariar.
+
+| Rótulo (Label)                   | Elemento/Tipo                 | Validação/Regras                            |
+| --------------------------------- | ----------------------------- | ------------------------------------------- |
+| Nome Completo:                    | `<input type="text">`         | `required`                                  |
+| Melhor E-mail:                    | `<input type="email">`        | `required`                                  |
+| Telefone (com DDD):               | `<input type="tel">`          | `required`, `pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"` |
+| Data de Nascimento:               | `<input type="date">`         | `required`                                  |
+| Áreas de Interesse                | `<input type="checkbox">`     | Nenhuma (opcional)                          |
+| Disponibilidade semanal           | `<select>`                    | `required`                                  |
+| Motivação                         | `<textarea>`                  | `required`                                  |
+
+---
+
+### 2. Formulário de Doação
+
+* **Localização:** `paginas/doacoes.html`
+* **Objetivo:** Captar doações financeiras, permitindo a escolha de valores, frequência e forma de pagamento.
+
+| Rótulo (Label)                   | Elemento/Tipo                 | Validação/Regras                            |
+| --------------------------------- | ----------------------------- | ------------------------------------------- |
+| Escolha o Valor                   | `<input type="radio">`        | `required`                                  |
+| Outro Valor (R$):                 | `<input type="number">`       | `min="5"`                                   |
+| Nome Completo:                    | `<input type="text">`         | `required`                                  |
+| E-mail:                           | `<input type="email">`        | `required`                                  |
+| CPF:                              | `<input type="text">`         | `required`, `pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"` |
+| Frequência                        | `<input type="radio">`        | `required`                                  |
+| Forma de Pagamento                | `<select>`                    | `required`                                  |
+| Aceite dos Termos                 | `<input type="checkbox">`     | `required`                                  |
+
+---
+
+### 3. Formulário de Contato Institucional
+
+* **Localização:** `paginas/contato.html`
+* **Objetivo:** Fornecer um canal de comunicação direto para o público geral, permitindo o envio de mensagens e anexos.
+
+| Rótulo (Label)                   | Elemento/Tipo                 | Validação/Regras                            |
+| --------------------------------- | ----------------------------- | ------------------------------------------- |
+| Seu Nome:                         | `<input type="text">`         | `required`                                  |
+| Seu E-mail:                       | `<input type="email">`        | `required`                                  |
+| Assunto:                          | `<select>`                    | `required`                                  |
+| Sua Mensagem:                     | `<textarea>`                  | `required`                                  |
+| Anexar um arquivo                 | `<input type="file">`         | Nenhuma (opcional)                          |
+| Inscrever na Newsletter           | `<input type="checkbox">`     | Nenhuma (opcional)                          |
+
+---
+
+### 4. Formulário de Inscrição na Newsletter
+
+* **Localização:** `paginas/blog.html`
+* **Objetivo:** Capturar o e-mail de visitantes interessados em receber notícias, permitindo a segmentação por interesse.
+
+| Rótulo (Label)                   | Elemento/Tipo                 | Validação/Regras                            |
+| --------------------------------- | ----------------------------- | ------------------------------------------- |
+| Seu melhor e-mail:                | `<input type="email">`        | `required`                                  |
+| Assuntos de Interesse             | `<input type="checkbox">`     | Nenhuma (opcional)                          |

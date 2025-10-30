@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os projetos sociais da ONG Vida Nova nas áreas de educação, capacitação profissional e apoio a famílias.">
+    <link rel="stylesheet" href="../css/base.min.css"> 
+    <link rel="stylesheet" href="../css/layout.min.css"> 
+    <link rel="stylesheet" href="../css/components.min.css">
+    
+    <title>Nossos Projetos | ONG Vida Nova</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="index.html">ONG Vida Nova</a></h1>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">
+            &#9776; </button>
+            
+            <nav role="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li class="menu-item-com-submenu"> <a href="projetos.html">Projetos</a> 
+            <ul class="submenu">
+                <li><a href="projetos.html#educacao">Educação</a></li>
+                <li><a href="projetos.html#capacitacao">Capacitação</a></li>
+                <li><a href="projetos.html#apoio-familias">Apoio a Famílias</a></li>
+            </ul>
+        </li>
+                    <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+
+                    <li class="li-theme-toggle">
+                        <button id="theme-toggle" class="btn" aria-label="Alternar para modo escuro">
+                            Modo Escuro
+                        </button>
+                    </li>
+    
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        
+        <div class="container">
+            <h1>Nossos Projetos</h1>
+            <p>Acreditamos que a mudança acontece através de ações concretas e contínuas. Conheça as frentes de trabalho que desenvolvemos para construir um futuro melhor para nossa comunidade.</p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <article class="card col-sm-6 col-md-4">
+                    <picture>
+                        <source srcset="../assets/img/criancas-estudando.webp" type="image/webp">
+                        <img src="../assets/img/criancas-estudando.jpg" alt="Crianças sorrindo em uma sala de aula.">
+                    </picture>
+                    
+                    <div class="card-conteudo">
+                        <h2 id="educacao">Educação para Crianças e Jovens</h2>
+                        <p>Este é nosso projeto pioneiro. O objetivo é oferecer suporte educacional e cultural para crianças e jovens de 6 a 14 anos...</p>
+                        
+                        <h3>Principais Atividades:</h3>
+                        <ul>
+                            <li>Aulas de reforço de Português e Matemática.</li>
+                            <li>Oficinas de leitura, artes e música.</li>
+                            <li>Acesso a computadores e inclusão digital.</li>
+                            <li>Passeios culturais e atividades externas.</li>
+                        </ul>
+                        <a href="doacoes.html" class="btn btn-primario">APOIE ESTE PROJETO</a>
+                    </div>
+                </article>
+
+                <article class="card col-sm-6 col-md-4">
+                    <picture>
+                        <source srcset="../assets/img/adultos-capacitando.webp" type="image/webp">
+                        <img src="../assets/img/adultos-capacitando.jpg" alt="Adultos em um curso de informática.">
+                    </picture>
+                    <div class="card-conteudo">
+                        <h2 id="capacitacao">Capacitação Profissional para Adultos</h2>
+                        <p>Focado em jovens e adultos a partir de 18 anos, este projeto visa ampliar as oportunidades de inserção no mercado de trabalho...</p>
+                        
+                        <h3>Cursos Oferecidos:</h3>
+                        <ul>
+                            <li>Informática Básica e Pacote Office.</li>
+                            <li>Atendimento ao Cliente e Vendas.</li>
+                            <li>Oficinas de criação de currículo e entrevistas.</li>
+                            <li>Introdução ao Empreendedorismo.</li>
+                        </ul>
+                        <a href="voluntariado.html" class="btn btn-primario">SEJA UM MENTOR VOLUNTÁRIO</a>
+                    </div>
+                </article>
+
+                <article class="card col-sm-6 col-md-4">
+                    <picture>
+                        <source srcset="../assets/img/Auxilio-Brasil.webp" type="image/webp">
+                        <img src="../assets/img/Auxilio-Brasil.jpg" alt="Voluntário entregando uma cesta básica para uma família.">
+                    </picture>
+                    <div class="card-conteudo">
+                        <h2 id="apoio-familias">Apoio a Famílias em Vulnerabilidade</h2>
+                        <p>Além da educação, entendemos a importância de garantir a segurança e o bem-estar das famílias de nossos atendidos...</p>
+                        
+                        <h3>Ações do Projeto:</h3>
+                        <ul>
+                            <li>Distribuição mensal de cestas básicas.</li>
+                            <li>Rodas de conversa e apoio psicológico.</li>
+                            <li>Orientação jurídica e social.</li>
+                        </ul>
+                        <a href="doacoes.html" class="btn btn-primario">DOE UMA CESTA BÁSICA</a>
+                    </div>
+                </article>
+            </div> </div>
+
+        <section>
+            <div class="container">
+                <h2>Nosso Impacto por Região</h2>
+                <p>Número de famílias atendidas em cada uma das principais áreas de atuação em 2024.</p>
+
+                <canvas id="graficoImpacto" width="400" height="250"></canvas>
+                
+                <script>
+                    const canvasBarras = document.getElementById('graficoImpacto');
+                    const ctxBarras = canvasBarras.getContext('2d');
+                    ctxBarras.fillStyle = '#D2691E';
+                    ctxBarras.fillRect(70, 100, 50, 130); 
+                    ctxBarras.fillRect(170, 50, 50, 180);
+                    ctxBarras.fillRect(270, 150, 50, 80);
+                </script>
+                <p><em>Gráfico ilustrativo. A implementação completa dos dados será feita com JavaScript.</em></p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Depoimentos de Quem Faz Parte</h2>
+                <p>Ouça as histórias de pessoas que tiveram suas vidas transformadas por nossos projetos.</p>
+                
+                <div class="row">
+                    <figure class="card col-sm-6">
+                        <div class="card-conteudo">
+                            <figcaption><strong>Depoimento de Carlos Andrade</strong></figcaption>
+                            <audio controls style="width: 100%;">
+                                <source src="../assets/audios/depoimento-carlos.mp3" type="audio/mpeg">
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                            <p><a href="#">Acessar transcrição do depoimento (Em breve)</a></p>
+                        </div>
+                    </figure>
+                    <figure class="card col-sm-6">
+                        <div class="card-conteudo">
+                            <figcaption><strong>Depoimento de Sofia Lima</strong></figcaption>
+                            <audio controls style="width: 100%;">
+                                <source src="../assets/audios/depoimento-sofia.mp3" type="audio/mpeg">
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                            <p><a href="#">Acessar transcrição do depoimento (Em breve)</a></p>
+                        </div>
+                    </figure>
+                </div> </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Galeria de Atividades</h2>
+                <div class="row">
+                    <figure class="card col-sm-6 col-md-4 col-lg-3">
+                        <picture>
+                            <source srcset="https://picsum.photos/300/200?random=1&format=webp" type="image/webp">
+                            <img src="https://picsum.photos/300/200?random=1" alt="Galeria de fotos 1" loading="lazy">
+                        </picture>
+                    </figure>
+                    <figure class="card col-sm-6 col-md-4 col-lg-3">
+                        <picture>
+                            <source srcset="https://picsum.photos/300/200?random=2&format=webp" type="image/webp">
+                            <img src="https://picsum.photos/300/200?random=2" alt="Galeria de fotos 2" loading="lazy">
+                        </picture>
+                    </figure>
+                    <figure class="card col-sm-6 col-md-4 col-lg-3">
+                        <picture>
+                            <source srcset="https://picsum.photos/300/200?random=3&format=webp" type="image/webp">
+                            <img src="https://picsum.photos/300/200?random=3" alt="Galeria de fotos 3" loading="lazy">
+                        </picture>
+                    </figure>
+                    <figure class="card col-sm-6 col-md-4 col-lg-3">
+                        <picture>
+                            <source srcset="https://picsum.photos/300/200?random=4&format=webp" type="image/webp">
+                            <img src="https://picsum.photos/300/200?random=4" alt="Galeria de fotos 4" loading="lazy">
+                        </picture>
+                    </figure>
+                    </div> </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>ONG Vida Nova</strong></p>
+            <p>Endereço: Rua da Esperança, 123 - Centro, Diadema/SP</p>
+            <p>Telefone: (11) 5555-1234 | E-mail: contato@ongvidanova.org.br</p>
+            <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../js/script.min.js"></script>
+</body>
+</html>

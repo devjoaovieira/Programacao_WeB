@@ -1,0 +1,95 @@
+1. Wireframe: Página Inicial (index.html)
+Descrição: A página inicial serve como um portal, apresentando a missão da ONG e direcionando o usuário para as seções mais importantes. A estrutura é dividida em um cabeçalho fixo, uma área principal com seções de destaque e um rodapé com informações de contato.
+
+Diagrama Visual:
+
++----------------------------------------------------------------+
+| CABEÇALHO                                                      |
+|                                                                |
+|   [Logo: ONG Vida Nova]                                        |
+|                                                                |
+|   [Menu de Navegação: Início | Sobre | Projetos | ... ]        |
+|                                                                |
++----------------------------------------------------------------+
+| CONTEÚDO PRINCIPAL (MAIN)                                      |
+|                                                                |
+|   +--------------------------------------------------------+   |
+|   | Seção 1: Banner Principal                            |   |
+|   |                                                        |   |
+|   |   "Transformando Vidas, Construindo Futuros"           |   |
+|   |                                                        |   |
+|   |   [Botão: FAÇA UMA DOAÇÃO]  [Botão: SEJA VOLUNTÁRIO]   |   |
+|   +--------------------------------------------------------+   |
+|                                                                |
+|   +--------------------------------------------------------+   |
+|   | Seção 2: Nossos Projetos em Destaque                   |   |
+|   |                                                        |   |
+|   |   [Artigo: Educação]      [Artigo: Capacitação]        |   |
+|   |                                                        |   |
+|   +--------------------------------------------------------+   |
+|                                                                |
+|   +--------------------------------------------------------+   |
+|   | Seção 3: Últimas Notícias                             |   |
+|   |                                                        |   |
+|   |   [Artigo: Evento]        [Artigo: Novas Vagas]        |   |
+|   |                                                        |   |
+|   +--------------------------------------------------------+   |
+|                                                                |
++----------------------------------------------------------------+
+| RODAPÉ                                                         |
+|                                                                |
+|   [Informações de Contato] [Endereço] [Copyright ©]           |
+|                                                                |
++----------------------------------------------------------------+
+2. Wireframe: Página de Projetos (projetos.html)
+Descrição: Esta página detalha cada iniciativa da ONG. A estrutura segue o padrão de cabeçalho e rodapé, com a área de conteúdo principal listando cada projeto como um artigo independente, seguido por seções de multimídia e dados para enriquecer a apresentação.
+
+Diagrama Visual:
+
++----------------------------------------------------------------+
+| CABEÇALHO                                                      |
+|   (Idêntico ao da Página Inicial)                              |
++----------------------------------------------------------------+
+| CONTEÚDO PRINCIPAL (MAIN)                                      |
+|                                                                |
+|   "Título Principal: Nossos Projetos"                          |
+|                                                                |
+|   +--------------------------------------------------------+   |
+|   | Artigo do Projeto 1: Educação                          |   |
+|   |                                                        |   |
+|   |   [Imagem do Projeto]                                  |   |
+|   |   [Descrição do Projeto]                               |   |
+|   |   [Lista de Atividades]                                |   |
+|   |   [Link de Ação]                                       |   |
+|   +--------------------------------------------------------+   |
+|                                                                |
+|   +--------------------------------------------------------+   |
+|   | Artigo do Projeto 2: Capacitação                       |   |
+|   |   (Estrutura idêntica à do Projeto 1)                  |   |
+|   +--------------------------------------------------------+   |
+|                                                                |
+|   +--------------------------------------------------------+   |
+|   | Seção: Nosso Impacto por Região                        |   |
+|   |                                                        |   |
+|   |   [Área para o Gráfico de Barras - Canvas]             |   |
+|   |                                                        |   |
+|   +--------------------------------------------------------+   |
+|                                                                |
+|   +--------------------------------------------------------+   |
+|   | Seção: Depoimentos em Áudio                            |   |
+|   |                                                        |   |
+|   |   [Player de Áudio 1] [Player de Áudio 2]              |   |
+|   |                                                        |   |
+|   +--------------------------------------------------------+   |
+|                                                                |
+|   +--------------------------------------------------------+   |
+|   | Seção: Galeria de Atividades                           |   |
+|   |                                                        |   |
+|   | [Img] [Img] [Img] [Img] [Img] [Img] [Img] [Img]        |   |
+|   |                                                        |   |
+|   +--------------------------------------------------------+   |
+|                                                                |
++----------------------------------------------------------------+
+| RODAPÉ                                                         |
+|   (Idêntico ao da Página Inicial)                              |
++----------------------------------------------------------------+

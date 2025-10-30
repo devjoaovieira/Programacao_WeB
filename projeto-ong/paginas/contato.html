@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a ONG Vida Nova. Envie sua mensagem, tire dúvidas ou venha nos visitar.">
+    <link rel="stylesheet" href="../css/base.min.css"> 
+    <link rel="stylesheet" href="../css/layout.min.css"> 
+    <link rel="stylesheet" href="../css/components.min.css">
+    
+    <title>Contato | ONG Vida Nova</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="index.html">ONG Vida Nova</a></h1>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">
+            &#9776; </button>
+            
+            <nav role="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li class="menu-item-com-submenu"> <a href="projetos.html">Projetos</a> 
+                        <ul class="submenu">
+                            <li><a href="projetos.html#educacao">Educação</a></li>
+                            <li><a href="projetos.html#capacitacao">Capacitação</a></li>
+                            <li><a href="projetos.html#apoio-familias">Apoio a Famílias</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+
+                    <li class="li-theme-toggle">
+                        <button id="theme-toggle" class="btn" aria-label="Alternar para modo escuro">
+                            Modo Escuro
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <h1>Entre em Contato</h1>
+
+            <div class="row">
+
+                <section class="col-md-6">
+                    <h2>Nossos Canais de Atendimento</h2>
+                    <p>Ficamos felizes em ouvir você. Utilize um dos canais abaixo ou preencha o formulário para nos enviar uma mensagem.</p>
+                    
+                    <p><strong>Endereço:</strong><br>
+                    Rua da Esperança, 123 - Centro<br>
+                    Diadema/SP - CEP: 09910-170</p>
+                    
+                    <p><strong>Telefone:</strong><br>
+                    (11) 5555-1234</p>
+
+                    <p><strong>E-mail:</strong><br>
+                    contato@ongvidanova.org.br</p>
+
+                    <p><strong>Horário de Atendimento:</strong><br>
+                    Segunda a Sexta, das 9h às 18h.</p>
+                </section>
+
+                <section class="col-md-6">
+                    <h2>Envie uma Mensagem</h2>
+                    
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend>Formulário de Contato</legend>
+
+                            <label for="nome_contato">Seu Nome:</label><br>
+                            <input type="text" id="nome_contato" name="nome_contato" required placeholder="Digite seu nome completo" aria-describedby="erro-nome"> <br>
+                            <span class="mensagem-erro" id="erro-nome">Por favor, preencha seu nome.</span>
+                            <br> 
+
+                            <label for="email_contato">Seu E-mail:</label><br>
+                            <input type="email" id="email_contato" name="email_contato" required placeholder="seuemail@exemplo.com" aria-describedby="erro-email"> <br>
+                            <span class="mensagem-erro" id="erro-email">Por favor, insira um e-mail válido.</span>
+                            <br>
+
+
+                            <label for="assunto">Assunto:</label><br>
+                            <select id="assunto" name="assunto" required aria-describedby="erro-assunto">
+                                <option value="">-- Selecione o motivo do contato --</option>
+                                <option value="doacoes">Informações sobre Doações</option>
+                                <option value="voluntariado">Quero ser Voluntário</option>
+                                <option value="parcerias">Proposta de Parceria</option>
+                                <option value="imprensa">Imprensa</option>
+                                <option value="outro">Outro Assunto</option>
+                            </select><br>
+                            <span class="mensagem-erro" id="erro-assunto">Por favor, selecione um assunto.</span>
+                            <br>
+
+                            <label for="mensagem">Sua Mensagem:</label><br>
+                            <textarea id="mensagem" name="mensagem" rows="8" cols="50" required placeholder="Escreva sua mensagem aqui..." aria-describedby="erro-mensagem"></textarea><br>
+                            <span class="mensagem-erro" id="erro-mensagem">Por favor, escreva sua mensagem.</span>
+                            <br>
+                            
+                            <label for="anexo">Anexar um arquivo (opcional):</label><br>
+                            <input type="file" id="anexo" name="anexo" accept=".pdf,.doc,.docx,.jpg,.png"><br><br>
+                            
+                            <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+                            <label for="newsletter">Gostaria de receber notícias e novidades da ONG por e-mail.</label><br><br>
+
+                        </fieldset>
+                        
+                        <input type="submit" value="Enviar Mensagem" class="btn btn-primario btn-block">
+                    </form>
+                </section>
+                
+            </div> </div> </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>ONG Vida Nova</strong></p>
+            <p>Endereço: Rua da Esperança, 123 - Centro, Diadema/SP</p>
+            <p>Telefone: (11) 5555-1234 | E-mail: contato@ongvidanova.org.br</p>
+            <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../js/script.min.js"></script>
+</body>
+</html>

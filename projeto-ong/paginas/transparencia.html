@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesse os relatórios anuais, demonstrativos financeiros e outros documentos da ONG Vida Nova. Nosso compromisso é com a total transparência.">
+    <link rel="stylesheet" href="../css/base.min.css"> 
+    <link rel="stylesheet" href="../css/layout.min.css"> 
+    <link rel="stylesheet" href="../css/components.min.css"> 
+    
+    <title>Transparência | ONG Vida Nova</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="index.html">ONG Vida Nova</a></h1>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">
+            &#9776; </button>
+            
+            <nav role="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li class="menu-item-com-submenu"> <a href="projetos.html">Projetos</a> 
+            <ul class="submenu">
+                <li><a href="projetos.html#educacao">Educação</a></li>
+                <li><a href="projetos.html#capacitacao">Capacitação</a></li>
+                <li><a href="projetos.html#apoio-familias">Apoio a Famílias</a></li>
+            </ul>
+        </li>
+                    <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+
+                    <li class="li-theme-toggle">
+                        <button id="theme-toggle" class="btn" aria-label="Alternar para modo escuro">
+                            Modo Escuro
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        
+        <div class="container">
+            <h1>Transparência e Prestação de Contas</h1>
+        </div>
+
+        <section>
+            <div class="container">
+                <h2>Nosso Compromisso com a Clareza</h2>
+                <p>Acreditamos que a transparência é o pilar fundamental que sustenta a confiança entre a nossa organização, nossos doadores, voluntários e a comunidade que servimos. Nesta página, você encontrará todos os documentos relevantes sobre nossa gestão, finanças e impacto, disponíveis para consulta a qualquer momento.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="row">
+
+                <section class="card col-sm-6 col-md-4">
+                    <div class="card-conteudo">
+                        <h2>Relatórios Anuais</h2>
+                        <p>Confira um resumo completo de nossas atividades, projetos realizados, público atendido e resultados alcançados a cada ano.</p>
+                        <ul>
+                            <li>
+                                <strong>Relatório Anual 2024:</strong>
+                                <a href="../assets/documentos/relatorio-2024.pdf" download class="btn">Baixar PDF</a>(PDF)
+                            </li>
+                            <li>
+                                <strong>Relatório Anual 2023:</strong>
+                                <a href="../assets/documentos/relatorio-2023.pdf" download class="btn">Baixar PDF</a>(PDF)
+                            </li>
+                            <li>
+                                <strong>Relatório Anual 2022:</strong>
+                                <a href="../assets/documentos/relatorio-2022.pdf" download class="btn">Baixar PDF</a>(PDF)
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="card col-sm-6 col-md-4">
+                    <div class="card-conteudo">
+                        <h2>Demonstrativos</h2>
+                        <p>Acesse os balanços e demonstrativos que detalham a origem e a aplicação de nossos recursos financeiros.</p>
+                        <ul>
+                            <li>
+                                <strong>Balanço Patrimonial 2024:</strong>
+                                <a href="../assets/documentos/balanco-2024.pdf" download class="btn">Baixar PDF</a>(PDF)
+                            </li>
+                            <li>
+                                <strong>Demonstrativo (DRE) 2024:</strong>
+                                <a href="../assets/documentos/dre-2024.pdf" download class="btn">Baixar PDF</a>(PDF)
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="card col-sm-6 col-md-4">
+                    <div class="card-conteudo">
+                        <h2>Estatuto e Certidões</h2>
+                        <p>Consulte os documentos que regem nossa organização e comprovam nossa regularidade fiscal e jurídica.</p>
+                        <ul>
+                            <li>
+                                <strong>Estatuto Social:</strong>
+                                <a href="../assets/documentos/estatuto-social.pdf" download class="btn">Baixar PDF</a>(PDF)
+                            </li>
+                            <li>
+                                <strong>Cartão CNPJ:</strong>
+                                <a href="../assets/documentos/cartao-cnpj.pdf" download class="btn">Baixar PDF</a>(PDF)
+                            </li>
+                            <li>
+                                <strong>CND Federal:</strong>
+                                <a href="../assets/documentos/cnd-federal.pdf" download class="btn">Baixar PDF</a>(PDF)
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div> </div>
+
+        <section>
+            <div class="container">
+                <h2>Visualização de Dados</h2>
+                <h3>Distribuição de Recursos por Projeto em 2024</h3>
+                
+                <canvas id="graficoRecursos" width="400" height="250"></canvas>
+                
+                <script>
+                    const canvasPizza = document.getElementById('graficoRecursos');
+                    const ctxPizza = canvasPizza.getContext('2d');
+                    ctxPizza.fillStyle = '#003366';
+                    ctxPizza.beginPath();
+                    ctxPizza.moveTo(200, 125);
+                    ctxPizza.arc(200, 125, 100, 0, 1.5 * Math.PI);
+                    ctxPizza.closePath();
+                    ctxPizza.fill();
+                </script>
+                <p><em>Gráfico ilustrativo.</em></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>ONG Vida Nova</strong></p>
+            <p>Endereço: Rua da Esperança, 123 - Centro, Diadema/SP</p>
+            <p>Telefone: (11) 5555-1234 | E-mail: contato@ongvidanova.org.br</p>
+            <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../js/script.min.js"></script>
+</body>
+</html>

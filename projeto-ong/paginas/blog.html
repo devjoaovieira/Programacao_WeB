@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acompanhe as últimas notícias, eventos e histórias de impacto da ONG Vida Nova.">
+    <link rel="stylesheet" href="../css/base.min.css"> 
+    <link rel="stylesheet" href="../css/layout.min.css"> 
+    <link rel="stylesheet" href="../css/components.min.css">
+    
+    <title>Blog | ONG Vida Nova</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="index.html">ONG Vida Nova</a></h1>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">
+            &#9776; </button>
+            
+            <nav role="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li class="menu-item-com-submenu"> <a href="projetos.html">Projetos</a> 
+                        <ul class="submenu">
+                            <li><a href="projetos.html#educacao">Educação</a></li>
+                            <li><a href="projetos.html#capacitacao">Capacitação</a></li>
+                            <li><a href="projetos.html#apoio-familias">Apoio a Famílias</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="voluntariado.html">Seja Voluntário</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+
+                    <li class="li-theme-toggle">
+                        <button id="theme-toggle" class="btn" aria-label="Alternar para modo escuro">
+                            Modo Escuro
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <h1>Blog e Notícias</h1>
+
+            <div class="row">
+                
+                <section class="col-md-9">
+                    <h2>Últimas notícias</h2>
+                    
+                    <article class="card">
+                        <div class="card-conteudo">
+                            <h2><a href="#">Nosso Evento Anual de Arrecadação foi um Sucesso!</a></h2>
+                            <p><em>Publicado em 06 de outubro de 2025 por Equipe Vida Nova</em></p>
+                            <p>No último sábado, realizamos nosso evento anual de arrecadação e, graças à generosidade de nossa comunidade, superamos todas as metas! Os fundos garantirão a continuidade de nossos projetos educacionais por mais um ano. Agradecemos a cada doador, voluntário e apoiador que tornou essa noite inesquecível. Confira a galeria de fotos e o relatório completo do evento...</p>
+                            <a href="#" class="btn">Leia Mais &raquo;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-conteudo">
+                            <h2><a href="#">Abertura de Novas Vagas para Voluntários de Mentoria</a></h2>
+                            <p><em>Publicado em 28 de setembro de 2025 por Ana Costa</em></p>
+                            <p>Estamos expandindo nosso projeto de Capacitação Profissional e buscamos novos mentores voluntários! Se você tem experiência em áreas como RH, tecnologia, finanças ou marketing e quer compartilhar seu conhecimento com jovens em busca de oportunidades, esta é a sua chance. As inscrições estão abertas e o impacto que você pode causar é imenso...</p>
+                            <a href="#" class="btn">Leia Mais &raquo;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-conteudo">
+                            <h2><a href="#">Depoimento: Como a ONG Mudou a Minha Vida</a></h2>
+                            <p><em>Publicado em 15 de setembro de 2025 por Carlos Andrade (Beneficiário)</em></p>
+                            <p>Meu nome é Carlos, tenho 22 anos, e quero compartilhar como os cursos da ONG Vida Nova abriram as portas do mercado de trabalho para mim. Antes de conhecer o projeto, eu estava desempregado e sem perspectivas. Hoje, trabalho como assistente administrativo e sonho em cursar uma faculdade. Sou imensamente grato por todo o apoio...</p>
+                            <a href="#" class="btn">Leia Mais &raquo;</a>
+                        </div>
+                    </article>
+
+                </section>
+
+                <aside class="col-md-3">
+                    
+                    <section class="card">
+                        <div class="card-conteudo">
+                            <h3>Assine nossa Newsletter</h3>
+                            <p>Receba nossas novidades e relatórios de impacto diretamente no seu e-mail.</p>
+                            
+                            <form action="#" method="post">
+                                <label for="email_news">Seu melhor e-mail:</label><br>
+                                <input type="email" id="email_news" name="email_news" required placeholder="seuemail@exemplo.com" aria-describedby="erro-email-news"><br>
+                                <span class="mensagem-erro" id="erro-email-news">Por favor, insira um e-mail válido.</span>
+                                <br>
+
+                                <fieldset>
+                                    <legend>Quais assuntos te interessam?</legend>
+                                    <input type="checkbox" id="pref_projetos" name="preferencia" value="projetos">
+                                    <label for="pref_projetos">Notícias de Projetos</label><br>
+                                    <input type="checkbox" id="pref_eventos" name="preferencia" value="eventos">
+                                    <label for="pref_eventos">Convites para Eventos</label><br>
+                                    <input type="checkbox" id="pref_relatorios" name="preferencia" value="relatorios">
+                                    <label for="pref_relatorios">Relatórios de Impacto</label><br>
+                                </fieldset>
+                                <br>
+                                <input type="submit" value="Quero me Inscrever" class="btn btn-primario btn-block">
+                            </form>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <div class="card-conteudo">
+                            <h3>Categorias</h3>
+                            <ul>
+                                <li><a href="#">Eventos</a></li>
+                                <li><a href="#">Nossos Projetos</a></li>
+                                <li><a href="#">Depoimentos</a></li>
+                                <li><a href="#">Prestação de Contas</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </aside>
+            </div> </div> </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>ONG Vida Nova</strong></p>
+            <p>Endereço: Rua da Esperança, 123 - Centro, Diadema/SP</p>
+            <p>Telefone: (11) 5555-1234 | E-mail: contato@ongvidanova.org.br</p>
+            <p>&copy; 2025 ONG Vida Nova. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../js/script.min.js"></script>
+</body>
+</html>

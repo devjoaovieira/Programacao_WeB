@@ -1,0 +1,192 @@
+/* ============================================= */
+/* ARQUIVO: base.css                             */
+/* OBJETIVO: Sistema de Design e Estilos Globais */
+/* ============================================= */
+
+/* ---------------------------------- */
+/* 1. VARIÁVEIS DO SISTEMA DE DESIGN  */
+/* ---------------------------------- */
+:root {
+    
+    /* Requisito 1: Paleta de Cores (8 cores) */
+    /* Cores Primárias (Azuis) */
+    --cor-primaria: #005A9C;
+    --cor-primaria-escura: #003366;
+    --cor-primaria-clara: #E6F0F8;
+
+    /* Cores Secundárias (Destaque) */
+    --cor-secundaria: #FFA500; /* Laranja para botões de "Doar" */
+
+    /* Cores Neutras (Texto e Fundo) */
+    --cor-fundo: #FFFFFF;
+    --cor-fundo-alternativa: #F4F7FA;
+    --cor-texto-principal: #333333;
+    --cor-texto-secundario: #555555;
+    
+    
+    /* Requisito 2: Tipografia (5 tamanhos + famílias) */
+    --fonte-familia-principal: 'Arial', sans-serif;
+    --fonte-familia-titulos: 'Georgia', serif;
+
+    --fonte-tamanho-gg: 2.5rem;  /* 40px - Títulos Principais (h1) */
+    --fonte-tamanho-g:  1.75rem; /* 28px - Títulos de Seção (h2) */
+    --fonte-tamanho-m:  1.25rem; /* 20px - Subtítulos (h3) */
+    --fonte-tamanho-p:  1rem;    /* 16px - Texto Padrão (body, p) */
+    --fonte-tamanho-pp: 0.875rem;/* 14px - Textos pequenos (legendas) */
+
+    --fonte-peso-regular: 400;
+    --fonte-peso-negrito: 700;
+
+
+    /* Requisito 3: Sistema de Espaçamento (Modular 8px) */
+    --espaco-pp: 0.5rem;  /* 8px */
+    --espaco-p:  1rem;    /* 16px */
+    --espaco-m:  1.5rem;  /* 24px */
+    --espaco-g:  2rem;    /* 32px */
+    --espaco-gg: 3rem;    /* 48px */
+    --espaco-xg: 4rem;    /* 64px */
+
+    /* --- Variáveis do Modo Escuro --- */
+    --dm-cor-fundo: #121212;
+    --dm-cor-fundo-alternativa: #1E1E1E;
+    --dm-cor-texto-principal: #F1F1F1;
+    --dm-cor-texto-secundario: #bbbbbb;
+    --dm-cor-link: #55ADFF; /* Azul claro acessível */
+    --dm-cor-header-fundo: #000000;
+    --dm-cor-footer-fundo: #111111;
+    --dm-cor-borda: #444444;
+}
+
+
+/* ---------------------------------- */
+/* 2. ESTILOS GLOBAIS E RESET         */
+/* ---------------------------------- */
+
+/* * Reset universal que facilita o cálculo de 
+ * larguras e alturas. Padding e Borda passam 
+ * a fazer parte da largura/altura total do elemento.
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* * Estilos base aplicados a todo o site.
+ * Usamos as variáveis que acabamos de definir.
+ */
+body {
+    font-family: var(--fonte-familia-principal);
+    font-size: var(--fonte-tamanho-p);
+    font-weight: var(--fonte-peso-regular);
+    line-height: 1.6; /* Altura de linha para boa legibilidade */
+    
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-fundo);
+}
+
+/* ============================================= */
+/* 3. MODO ESCURO (DARK MODE / ALTO CONTRASTE)   */
+/* ============================================= */
+
+/* Aplica as variáveis do modo escuro quando a classe .dark-mode está no body */
+body.dark-mode {
+    /* 1. Mapeia as variáveis base para as variáveis do modo escuro */
+    --cor-fundo: var(--dm-cor-fundo);
+    --cor-fundo-alternativa: var(--dm-cor-fundo-alternativa);
+    --cor-texto-principal: var(--dm-cor-texto-principal);
+    --cor-texto-secundario: var(--dm-cor-texto-secundario);
+    --cor-primaria: var(--dm-cor-link); /* Links */
+    --cor-primaria-clara: var(--dm-cor-fundo-alternativa); /* Fundos de seção */
+}
+
+/* 2. Sobrescreve estilos de layout que não usam variáveis de fundo/texto */
+body.dark-mode header {
+    background-color: var(--dm-cor-header-fundo);
+    border-bottom-color: var(--cor-secundaria); /* Mantém o laranja */
+}
+
+body.dark-mode footer {
+    background-color: var(--dm-cor-footer-fundo);
+    color: var(--dm-cor-texto-secundario);
+}
+
+/* 3. Sobrescreve estilos de componentes */
+body.dark-mode .card {
+    background-color: var(--dm-cor-fundo-alternativa);
+    border-color: var(--dm-cor-borda);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--dm-cor-texto-principal); /* Cor de título mais clara */
+}
+
+body.dark-mode header h1 a,
+body.dark-mode header nav a {
+    color: var(--dm-cor-texto-principal); /* Links do header */
+}
+
+body.dark-mode header nav a:hover,
+body.dark-mode header nav a:focus {
+    color: var(--cor-secundaria);
+}
+
+/* 4. Sobrescreve formulários */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="tel"],
+body.dark-mode input[type="date"],
+body.dark-mode input[type="number"],
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: var(--dm-cor-fundo-alternativa);
+    color: var(--dm-cor-texto-principal);
+    border-color: var(--dm-cor-borda);
+}
+
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="email"]:focus,
+body.dark-mode input[type="tel"]:focus,
+body.dark-mode input[type="date"]:focus,
+body.dark-mode input[type="number"]:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+    border-color: var(--dm-cor-link);
+    box-shadow: 0 0 5px rgba(85, 173, 255, 0.3);
+}
+
+body.dark-mode fieldset {
+    border-color: var(--dm-cor-borda);
+}
+
+body.dark-mode legend {
+    color: var(--dm-cor-link);
+}
+
+/* 5. Correção de Contraste para o Botão Primário (Laranja) */
+/* O texto deve ser escuro para contrastar com o fundo laranja */
+body.dark-mode .btn-primario {
+     color: #121212; 
+}
+body.dark-mode .btn-primario:hover,
+body.dark-mode .btn-primario:focus,
+body.dark-mode .btn-primario:active {
+    color: #121212; /* Mantém texto escuro */
+}
+
+/* 6. Sobrescreve menus de navegação */
+body.dark-mode header nav.menu-aberto ul {
+    background-color: var(--dm-cor-header-fundo);
+}
+body.dark-mode header nav ul.submenu {
+    background-color: var(--dm-cor-header-fundo);
+}
+body.dark-mode header nav ul.submenu a:hover,
+body.dark-mode header nav ul.submenu a:focus {
+    background-color: var(--cor-primaria-clara); /* Usa o fundo de seção escuro */
+}
